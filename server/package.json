@@ -1,0 +1,11 @@
+{
+  "name": "root-cause-server",
+  "version": "1.0.0",
+  "description": "Diagnostic engine backend for Root Cause — HACKFEST'26",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {}
+}

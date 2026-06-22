@@ -1,0 +1,77 @@
+{
+  "subject": "Algebra I — Factoring Quadratics",
+  "nodes": {
+    "factoring_quadratics": {
+      "label": "Factoring quadratics",
+      "description": "Expressing a quadratic trinomial as a product of two binomials.",
+      "depends_on": ["distributive_property", "sign_rules", "finding_factor_pairs"]
+    },
+    "distributive_property": {
+      "label": "Distributive property",
+      "description": "a(b + c) = ab + ac — expanding and verifying products of a term across a sum.",
+      "depends_on": ["integer_multiplication", "variable_notation", "combining_like_terms"]
+    },
+    "sign_rules": {
+      "label": "Sign rules under addition",
+      "description": "How positive and negative signs combine when adding or multiplying integers.",
+      "depends_on": ["integer_addition"]
+    },
+    "integer_multiplication": {
+      "label": "Integer multiplication",
+      "description": "Multiplying positive and negative whole numbers, including sign outcomes.",
+      "depends_on": []
+    },
+    "integer_addition": {
+      "label": "Integer addition",
+      "description": "Adding positive and negative whole numbers on a number line.",
+      "depends_on": []
+    },
+    "variable_notation": {
+      "label": "Variable notation",
+      "description": "Reading and writing expressions like 3x, x^2, and combining like terms.",
+      "depends_on": []
+    },
+    "finding_factor_pairs": {
+      "label": "Finding factor pairs",
+      "description": "Identifying two numbers that multiply to give a target product.",
+      "depends_on": ["integer_multiplication"]
+    },
+    "combining_like_terms": {
+      "label": "Combining like terms",
+      "description": "Adding or subtracting terms that share the same variable and exponent.",
+      "depends_on": ["variable_notation", "integer_addition"]
+    }
+  },
+  "misconception_types": [
+    {
+      "id": "incomplete_distribution",
+      "label": "Incomplete distribution",
+      "maps_to_node": "distributive_property",
+      "pattern": "Student expands a binomial product but drops or misapplies a term, suggesting the distributive property itself is not fully internalized."
+    },
+    {
+      "id": "sign_inversion",
+      "label": "Sign inversion",
+      "maps_to_node": "sign_rules",
+      "pattern": "Student finds the correct factor pair (correct magnitudes) but assigns the wrong signs to one or both factors."
+    },
+    {
+      "id": "wrong_factor_pair",
+      "label": "Wrong factor pair",
+      "maps_to_node": "finding_factor_pairs",
+      "pattern": "Student selects numbers that do not multiply to the constant term at all — the search for valid factor pairs broke down."
+    },
+    {
+      "id": "like_terms_error",
+      "label": "Like terms combined incorrectly",
+      "maps_to_node": "combining_like_terms",
+      "pattern": "Student merges unlike terms (e.g. treats x and x^2 as the same) or miscombines coefficients."
+    },
+    {
+      "id": "arithmetic_slip",
+      "label": "Basic arithmetic slip",
+      "maps_to_node": "integer_multiplication",
+      "pattern": "The method/approach is correct but a basic multiplication or addition fact is wrong."
+    }
+  ]
+}
