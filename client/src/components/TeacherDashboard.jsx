@@ -57,7 +57,7 @@ const FALLBACK_MOCK_DATA = [
 ];
 
 export default function TeacherDashboard() {
-  const [attempts, setAttempts] = useState([]);
+  const [attempts, setAttempts] = useState(FALLBACK_MOCK_DATA);
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [isFirebaseError, setIsFirebaseError] = useState(false);
