@@ -67,7 +67,9 @@ export default function TeacherDashboard() {
     try {
       const q = query(collection(db, "student_attempts"), orderBy("timestamp", "desc"));
       unsubscribe = onSnapshot(q, (querySnapshot) => {
-        const data = [];
+        // Prepend mock data so the dashboard ALWAYS looks fully populated for the demo,
+        // and any new live attempts will simply be appended/merged in real-time.
+        const data = [...FALLBACK_MOCK_DATA];
         querySnapshot.forEach((doc) => {
           data.push({ id: doc.id, ...doc.data() });
         });
@@ -87,15 +89,6 @@ export default function TeacherDashboard() {
 
     return () => unsubscribe();
   }, []);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (attempts.length === 0 && !loading) {
-        setAttempts(FALLBACK_MOCK_DATA);
-      }
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, [attempts, loading]);
 
   const handleExport = () => {
     const csvContent = "data:text/csv;charset=utf-8," 
